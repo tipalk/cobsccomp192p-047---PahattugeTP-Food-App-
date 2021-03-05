@@ -73,7 +73,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Up-RP-623">
-                                <rect key="frame" x="40" y="188" width="334" height="348"/>
+                                <rect key="frame" x="40" y="188" width="334" height="378.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image1" translatesAutoresizingMaskIntoConstraints="NO" id="az3-79-1RO">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="96"/>
@@ -106,6 +106,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBound" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Registertapped:" destination="42r-XU-LEy" eventType="touchUpInside" id="xYT-0E-xkh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMg-vx-8N4">
                                         <rect key="frame" x="0.0" y="278" width="334" height="30"/>
@@ -120,6 +123,13 @@
                                             <color key="titleColor" systemColor="secondaryLabelColor"/>
                                         </state>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMp-cK-K3k">
+                                        <rect key="frame" x="0.0" y="358" width="334" height="20.5"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -132,21 +142,30 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y6V-mm-KE5"/>
+                    <connections>
+                        <outlet property="emailaddresstext" destination="qkv-b9-Gdn" id="WEe-0t-fYf"/>
+                        <outlet property="errortext" destination="GMp-cK-K3k" id="YhU-H8-wXT"/>
+                        <outlet property="forgetpassbutton" destination="AFR-3x-Qmc" id="wv0-mj-3YG"/>
+                        <outlet property="loginbutton" destination="iMg-vx-8N4" id="Fhu-tD-UYw"/>
+                        <outlet property="passwordtext" destination="Rwr-Hy-Xkm" id="KaJ-Wk-8Ke"/>
+                        <outlet property="phonenumbertext" destination="ETP-gt-jO8" id="xSP-4t-aN7"/>
+                        <outlet property="registerbutton" destination="lpi-ku-e4u" id="N2N-ZY-pAq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fXa-x5-YsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="74"/>
+            <point key="canvasLocation" x="1682.608695652174" y="73.660714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="mcA-sn-Sbk">
             <objects>
-                <viewController id="YdW-o1-oJ4" sceneMemberID="viewController">
+                <viewController id="YdW-o1-oJ4" customClass="LoginViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="79e-Yb-3ph">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M9q-QD-nfH">
-                                <rect key="frame" x="40" y="217" width="334" height="224"/>
+                                <rect key="frame" x="40" y="217" width="334" height="254.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image1" translatesAutoresizingMaskIntoConstraints="NO" id="nYx-id-mba">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="96"/>
@@ -165,6 +184,12 @@
                                         <rect key="frame" x="0.0" y="194" width="334" height="30"/>
                                         <state key="normal" title="Login"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQg-S3-AHQ">
+                                        <rect key="frame" x="0.0" y="234" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -177,10 +202,40 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jiV-1l-1mA"/>
+                    <connections>
+                        <outlet property="emailaddresstext" destination="eYC-Vf-NbQ" id="jJ0-Ep-yKd"/>
+                        <outlet property="errortext" destination="CQg-S3-AHQ" id="mlt-Lt-PRJ"/>
+                        <outlet property="loginbutton" destination="Zjf-u2-Fth" id="TDB-sp-TPM"/>
+                        <outlet property="passwordtext" destination="jeK-rQ-uFk" id="afA-c1-N1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iJm-rS-Hvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2360.8695652173915" y="73.660714285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ssr-bY-Sth">
+            <objects>
+                <viewController id="pFE-6e-VII" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GQD-VH-MNA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sucess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg3-IF-7bN">
+                                <rect key="frame" x="195" y="374" width="54" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nT8-lx-04b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1S-Dq-9lm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3023" y="74"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bB6-tL-rHx">
@@ -216,6 +271,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
