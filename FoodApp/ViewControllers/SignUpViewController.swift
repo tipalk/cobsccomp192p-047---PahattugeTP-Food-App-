@@ -45,14 +45,29 @@ class SignUpViewController: UIViewController {
         }
         else
         {
-            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (result, err) in
+            let email = emailaddresstext.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordtext.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let phonenumber = phonenumbertext.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            Auth.auth().createUser(withEmail:email, password:password) { (result, err) in
                 
                 if  err != nil {
                     self.showError(message: "Error creating user")
                 }
                 else
                 {
-                   
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument( data: ["email":email, "password":password, "phonenumber":phonenumber, "uid": result?.user.uid ]) { (error) in
+                        
+                        if error != nil
+                        {
+                            self.showError(message: "Error saving user data")
+                            
+                        }
+                        
+                        
+                    }
+                    self.goHomePage()
+                    
                 }
             }
         }
@@ -62,6 +77,12 @@ class SignUpViewController: UIViewController {
         errortext.text = message
         errortext.alpha = 1
         
+    }
+    
+    func goHomePage()  {
+        let HomeViewController = storyboard?.instantiateViewController(identifier: Constants.storyboard.HomeViewController  )as? ViewController
+        view.window?.rootViewController = HomeViewController
+        view.window?.makeKeyAndVisible()
     }
     
 }
