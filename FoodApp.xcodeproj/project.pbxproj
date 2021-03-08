@@ -18,9 +18,11 @@
 		7926DD0125EF8D1F003BE370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7926DD0025EF8D1F003BE370 /* GoogleService-Info.plist */; };
 		7926DD0225EF8D1F003BE370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7926DD0025EF8D1F003BE370 /* GoogleService-Info.plist */; };
 		7926DD0325EF8D1F003BE370 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7926DD0025EF8D1F003BE370 /* GoogleService-Info.plist */; };
+		793A479525F67B8E00C55DF3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793A479425F67B8E00C55DF3 /* DetailViewController.swift */; };
 		79CA550125EFF22500CC3DEA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA550025EFF22500CC3DEA /* SignUpViewController.swift */; };
 		79CA550D25F0BD2300CC3DEA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CA550C25F0BD2300CC3DEA /* LoginViewController.swift */; };
 		79E45E3225F56A5F00C481CE /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E45E3125F56A5F00C481CE /* constants.swift */; };
+		79E45E3A25F6760800C481CE /* CellTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E45E3925F6760800C481CE /* CellTableView.swift */; };
 		7E6DC90DCA22D6D2FD443E0B /* Pods_FoodApp_FoodAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E4302BD4F637CC8F56D930 /* Pods_FoodApp_FoodAppUITests.framework */; };
 		BC5F9D072A02E5AC33B22C2D /* Pods_FoodApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D136E25FE500D7384B3CAE3 /* Pods_FoodApp.framework */; };
 		E30122BF89E4DBB4A007E1F1 /* Pods_FoodAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 998AB9FDDFEE7485FD53A9DA /* Pods_FoodAppTests.framework */; };
@@ -66,9 +68,11 @@
 		7926DCEF25EF8AAF003BE370 /* FoodAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppUITests.swift; sourceTree = "<group>"; };
 		7926DCF125EF8AAF003BE370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7926DD0025EF8D1F003BE370 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		793A479425F67B8E00C55DF3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		79CA550025EFF22500CC3DEA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		79CA550C25F0BD2300CC3DEA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		79E45E3125F56A5F00C481CE /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		79E45E3925F6760800C481CE /* CellTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTableView.swift; sourceTree = "<group>"; };
 		998AB9FDDFEE7485FD53A9DA /* Pods_FoodAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A9AB86F534E1B132BBDC71 /* Pods-FoodApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodApp.release.xcconfig"; path = "Target Support Files/Pods-FoodApp/Pods-FoodApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +180,8 @@
 				7926DCD125EF8AAE003BE370 /* ViewController.swift */,
 				79CA550025EFF22500CC3DEA /* SignUpViewController.swift */,
 				79CA550C25F0BD2300CC3DEA /* LoginViewController.swift */,
+				79E45E3925F6760800C481CE /* CellTableView.swift */,
+				793A479425F67B8E00C55DF3 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -440,11 +446,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7926DCD225EF8AAE003BE370 /* ViewController.swift in Sources */,
+				79E45E3A25F6760800C481CE /* CellTableView.swift in Sources */,
 				7926DCCE25EF8AAE003BE370 /* AppDelegate.swift in Sources */,
 				79CA550125EFF22500CC3DEA /* SignUpViewController.swift in Sources */,
 				79CA550D25F0BD2300CC3DEA /* LoginViewController.swift in Sources */,
 				7926DCD025EF8AAE003BE370 /* SceneDelegate.swift in Sources */,
 				79E45E3225F56A5F00C481CE /* constants.swift in Sources */,
+				793A479525F67B8E00C55DF3 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
